@@ -10,7 +10,6 @@ def quickSort(nums, start, end):
 
     return nums
 
-
 # 双指针交换法，元素交换完毕后，需要处理与pivot的交换关系
 def partition(nums, start, end):
     idx, pivot = start, nums[start]  # 取第一个元素为基准元素
