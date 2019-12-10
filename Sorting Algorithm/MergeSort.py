@@ -13,7 +13,6 @@ def mergeSort(nums, start, end):
     # 合并已排好序的两部分
     return merge(left, right)
 
-
 # 合并
 def merge(left, right):
     temp = []
