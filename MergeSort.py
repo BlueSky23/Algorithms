@@ -2,17 +2,17 @@
 # 时间复杂度：最坏情况下O(nlog(n))
 # 空间复杂度： O(n)
 
-def mergeSort(nums):
-    if len(nums) < 2:
-        return nums
-    mid = (len(nums)-1) // 2
+def mergeSort(nums, start, end):
+    if start == end:
+        return [nums[start]]
+    mid = (start + end) // 2
     # 左半部分排序
-    left = mergeSort(nums[:mid + 1])
+    left = mergeSort(nums, start, mid)
     # 右半部分排序
-    right = mergeSort(nums[mid + 1:])
+    right = mergeSort(nums, mid + 1, end)
     # 合并已排好序的两部分
-    temp = merge(left, right)
-    return temp
+    return merge(left, right)
+
 
 # 合并
 def merge(left, right):
@@ -36,5 +36,5 @@ def merge(left, right):
 
 nums1 = [-1, 4, 2, 45, -3, -3, 10]
 nums2 = [1, 2, 3, 4, 5]
-print(mergeSort(nums1))
-print(mergeSort(nums2))
+print(mergeSort(nums1, 0, len(nums1) - 1))
+print(mergeSort(nums2, 0, len(nums2) - 1))
