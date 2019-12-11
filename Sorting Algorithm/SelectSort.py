@@ -13,7 +13,6 @@ def selectSort(nums):
         nums[max_idx], nums[i - 1] = nums[i - 1], nums[max_idx]
     return nums
 
-
 nums1 = [-1, 4, 2, 45, -3, -3, 10]
 nums2 = [1, 2, 3, 4, 5]
 print(selectSort(nums1))
