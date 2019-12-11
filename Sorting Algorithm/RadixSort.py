@@ -24,7 +24,6 @@ def radixSort(nums):  # 待排序元素只由数字构成
 
     return nums
 
-
 def radixSort2(nums):  # 待排序元素只由小写字母构成
     # 假设所有元素长度一样，如不一样，可以适当在前或后补全
     len_e = len(nums[0])
